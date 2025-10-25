@@ -31,6 +31,7 @@ When working on this project:
 2. **Follow Slidev conventions** - Slides are separated by `---` and support frontmatter
 3. **Leverage built-in components** - Slidev provides components like `<Tweet/>`, `<Youtube/>`, `<Counter/>`, etc.
 4. **Use Markdown-first approach** - Content should be written in Markdown with Vue components where needed
+5. **Keep content minimal** - Slides should have minimal content to avoid text being cut off at the bottom. If a slide has too much content, split it into multiple slides
 
 ## File Structure
 - `slides.md` - Main presentation file (edit this for your presentation)
