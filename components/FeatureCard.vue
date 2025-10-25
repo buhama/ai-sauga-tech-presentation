@@ -1,7 +1,7 @@
 <template>
-  <div class="card" v-bind="$attrs">
-    <h3 v-if="title" class="card-title">{{ title }}</h3>
-    <div class="card-content">
+  <div class="section" v-bind="$attrs">
+    <h3 v-if="title" class="section-title">{{ title }}</h3>
+    <div class="section-content">
       <slot />
     </div>
   </div>
@@ -14,44 +14,39 @@ defineProps({
 </script>
 
 <style scoped>
-.card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
+.section {
+  padding: var(--space-lg) 0;
   height: 100%;
-  transition: border-color 0.2s ease;
+  border-top: 1px solid var(--border-primary);
 }
 
-.card:hover {
-  border-color: var(--text-tertiary);
-}
-
-.card-title {
-  margin-top: 0;
-  margin-bottom: var(--space-sm);
-  font-size: 0.875rem;
+.section-title {
+  margin: 0 0 var(--space-md) 0;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0;
+  letter-spacing: 0.05em;
 }
 
-.card-content {
+.section-content {
   color: var(--text-secondary);
 }
 
-.card-content :deep(ul) {
-  margin-top: var(--space-xs);
+.section-content :deep(ul) {
+  margin: 0;
+  padding: 0;
 }
 
-.card-content :deep(li) {
-  margin-bottom: var(--space-xs);
-  font-size: 0.875rem;
-}
-
-.card-content :deep(p) {
-  font-size: 0.875rem;
+.section-content :deep(li) {
   margin-bottom: var(--space-sm);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.section-content :deep(p) {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
 }
 </style>
