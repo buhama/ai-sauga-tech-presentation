@@ -262,6 +262,7 @@ pre code {
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-lg);
   margin-top: var(--space-lg);
+  direction: ltr;
 }
 
 /* ============================================
